@@ -1,9 +1,7 @@
 package io.mybartab.spendingservice.service;
 
-import java.math.BigDecimal;
+import io.mybartab.spendingservice.dto.CreateSpendingDto;
 
 public interface SpendingService {
-    void sendToPubSub(String s);
-
-    BigDecimal getSumForKey(String key);
+    void sendToPubSub(CreateSpendingDto createSpendingDto);
 }
