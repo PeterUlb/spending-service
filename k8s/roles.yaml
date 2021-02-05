@@ -4,9 +4,9 @@ metadata:
   namespace: default
   name: namespace-reader
 rules:
-  - apiGroups: ["", "extensions", "apps"]
-    resources: ["configmaps", "pods", "services", "endpoints", "secrets"]
-    verbs: ["get", "list", "watch"]
+  - apiGroups: [ "", "extensions", "apps" ]
+    resources: [ "configmaps", "pods", "services", "endpoints", "secrets" ]
+    verbs: [ "get", "list", "watch" ]
 
 ---
 
@@ -16,9 +16,9 @@ metadata:
   name: namespace-reader-binding
   namespace: default
 subjects:
-- kind: ServiceAccount
-  name: default
-  apiGroup: ""
+  - kind: ServiceAccount
+    name: default
+    apiGroup: ""
 roleRef:
   kind: Role
   name: namespace-reader
