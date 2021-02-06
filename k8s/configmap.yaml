@@ -10,10 +10,11 @@ data:
     spring.cloud.gcp.logging.enabled=true
     spring.cloud.kubernetes.reload.enabled=true
     spring.cloud.gcp.credentials.location=file:/etc/secrets/google/key.json
-    ---
+  application-dev.properties: |-
     spring.profiles=dev
     server.error.include-stacktrace=always
-    ---
+  application-prod.properties: |-
     spring.profiles=prod
     server.error.include-stacktrace=never
     logging.level.root=ERROR
+    spring.devtools.add-properties=false
